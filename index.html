@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy-Peasy Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="loader-container">
+      <div class="loading">
+        <svg
+          version="1.2"
+          height="300"
+          width="600"
+          xmlns="http://www.w3.org/2000/svg"
+          viewport="0 0 60 60"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            id="pulsar"
+            stroke="rgba(0,155,155,1)"
+            fill="none"
+            stroke-width="1"
+            stroke-linejoin="round"
+            d="M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="container">
+      <header>
+        <h1 class="title">EASY-PEASY CONTACT FORM 🤪</h1>
+      </header>
+      <main>
+        <div class="form">
+          <div class="form__main">
+            <input
+              type="text"
+              placeholder="type your name..."
+              name="name"
+              id="name"
+              onkeyup="nameWords()"
+              autocomplete="off"
+            />
+            <input
+              type="text"
+              placeholder="type your age..."
+              name="age"
+              id="age"
+              onkeyup="ageNumber()"
+              autocomplete="off"
+            />
+            <input
+              type="text"
+              placeholder="are you married ✌️ (yes/no)"
+              name="married"
+              id="married"
+              autocomplete="off"
+              onkeyup="marriedQuestion()"
+            />
+          </div>
+          <div class="form__buttons">
+            <button id="submit" class="btn">submit</button>
+            <button id="cancel" class="btn">cancel</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer__block">
+          <p class="parag__name"></p>
+          <p class="parag__age"></p>
+          <p class="parag__married"></p>
+        </div>
+        <h6 class="result"></h6>
+      </footer>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
